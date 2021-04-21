@@ -4,7 +4,7 @@ var express = require("express"),
   helmet = require('helmet'),
   log = require('fancy-log');
 
-app.use(helmet({contentSecurityPolicy: true}));
+app.use(helmet({contentSecurityPolicy: false}));
 
 let clientIp;
 let port = 1337;
