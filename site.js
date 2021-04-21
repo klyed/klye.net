@@ -9,10 +9,11 @@ app.use(helmet({contentSecurityPolicy: false}));
 let clientIp;
 let port = 1337;
 
-res.header('Access-Control-Allow-Origin', '*');
+
 
 function httpRedirect(req, res, next){
   clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  res.header('Access-Control-Allow-Origin', '*');
   log(`CONNECT: ${clientIp} Connected to Server`);
   if (req.headers['x-forwarded-proto'] === 'http') {
     res.redirect('http://127.0.0.1:1337');
