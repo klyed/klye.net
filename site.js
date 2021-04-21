@@ -9,7 +9,7 @@ app.use(helmet({contentSecurityPolicy: false}));
 let clientIp;
 let port = 1337;
 
-//  res.header('Access-Control-Allow-Origin', '*');
+res.header('Access-Control-Allow-Origin', '*');
 
 function httpRedirect(req, res, next){
   clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
