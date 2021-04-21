@@ -1,0 +1,33 @@
+{
+  "name": "klye.net",
+  "version": "0.0.1",
+  "description": "Official KLYE.net Website",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klyed/klye.net.git"
+  },
+  "keywords": [
+    "klye",
+    "crypto",
+    "portfolio",
+    "web",
+    "html",
+    "js",
+    "css"
+  ],
+  "author": "@KLYE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klyed/klye.net/issues"
+  },
+  "homepage": "https://github.com/klyed/klye.net#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fancy-log": "^1.3.3",
+    "helmet": "^4.5.0"
+  }
+}
