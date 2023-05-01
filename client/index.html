@@ -21,15 +21,14 @@
       function hideAll(){
         pageElemArray.forEach((item, i)=>{
           var pageElemId = `${item}-page`;
-          //$(`#${pageElemId}`).hide();
-          $(`#${pageElemId}`).fadeOut(100);//.delay(100).addClass('hidden');
-          //$(`#${pageElemId}`).addClass('hidden');
+          $(`#${pageElemId}`).hide();
+          $(`#${pageElemId}`).addClass('hidden');
         })
       };//END hideAll()
       hideAll();
       var pageElemTargetId = `${elem}-page`;
-      //$(`#${pageElemTargetId}`).show();
-      $(`#${pageElemTargetId}`).fadeIn(100);//.delay(100).removeClass('hidden');
+      $(`#${pageElemTargetId}`).show();
+      $(`#${pageElemTargetId}`).removeClass('hidden');
     };//END pageHider()
 
     function pageChange(page){
