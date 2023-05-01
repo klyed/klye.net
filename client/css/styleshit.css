@@ -96,6 +96,10 @@ display: inline-flex;
   margin: 0px 10px 0px 10px;
 }
 
+.menuthing:hover{
+  text-shadow: 0px 0px 3px gold;
+}
+
 #totallylegitcopyright {
   float: left;
 }
