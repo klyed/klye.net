@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>KLYE.NET v0.0.1</title>
+  <title>KLYE.NET v0.6.9</title>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; media-src *; script-src 'unsafe-inline' 'self' 'sha256-STKBEXc8IKJO/YuHT1HflmVSzcdHsfc3qaA4WMbDkXQ='">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
   <link rel="stylesheet" href="/css/styleshit.css">
@@ -10,12 +10,59 @@
   <script src="js/particles.js"></script>
 </head>
 <body>
+  <script>
+
+    var pageElemArray = ['home', 'portfolio', 'hire', 'donate', 'about'];
+
+    function pageHider(elem){
+      if(!elem) return console.log('Invalid Element!');
+      function hideAll(){
+        pageElemArray.forEach((item, i)=>{
+          var pageElemId = `${item}-page`;
+          $(`#${pageElemId}`).hide();
+          $(`#${pageElemId}`).addClass('hidden');
+        })
+      };//END hideAll()
+      hideAll();
+      var pageElemTargetId = `${elem}-page`;
+      $(`#${pageElemTargetId}`).show();
+      $(`#${pageElemTargetId}`).removeClass('hidden');
+    };//END pageHider()
+
+    function pageChange(page){
+      if(!page) return console.log(`Invalid Page!`);
+      page = page.toLowerCase();
+      var pageName = `${page}-page`;
+      switch(page){
+        case "portfolio":
+          pageHider(page);
+          return console.log(`Portfolio Page!`);
+        break;
+        case "hire":
+          pageHider(page);
+          return console.log(`Hire Page!`);
+        break;
+        case "donate":
+         pageHider(page);
+         return console.log(`Donate Page!`);
+        break;
+        case "about":
+         pageHider(page);
+         return console.log(`About Page!`);
+        break;
+        default:
+          pageHider(page);
+          return console.log(`Default/Home Page!`);
+        break;
+      };
+    };//END pageChange()
+  </script>
   <div id="particles-js">
     <div id="menudiv">
       <nav onclick="alert('Site Currently Under Construction! Check Back Later');">
         <ul class="menuroot sexyblackoutline">
-          <li class="menuthing "><a id="blog" style="float: left;" onclick="alert('Site Currently Under Construction! Check Back Later');" title="Visit KLYE's HIVE Blog on PeakD.com">blog</a></li>
-          <li class="menuthing "><a id="potfolio"  style="float: left;"  onclick="alert('Site Currently Under Construction! Check Back Later');" title="View My Project Portfolio">portfolio</a></li>
+          <li class="menuthing "><a id="blog" style="float: left;" src="https://peakd.com/@klye" target="_blank" title="Visit KLYE's HIVE Blog on PeakD.com">blog</a></li>
+          <li class="menuthing "><a id="portfolio"  style="float: left;"  onclick="alert('Site Currently Under Construction! Check Back Later');" title="View My Project Portfolio">portfolio</a></li>
           <li class="menuthing "><a id="hire"  style="float: left;" onclick="alert('Site Currently Under Construction! Check Back Later');" title="Hire KLYE as a Freelance Software Engineer or Consulant">hire</a></li>
           <li class="menuthing "><a id="donate"  style="float: left;" onclick="alert('Site Currently Under Construction! Check Back Later');" title="Make a Donation to the KLYE Empire">donate</a></li>
           <li class="menuthing "><a id="about"  style="float: left;" onclick="alert('Site Currently Under Construction! Check Back Later');" title="About the Mythical Internet Asshole KLYE">about</a></li>
@@ -24,6 +71,34 @@
       </nav>
     </div>
     <div id="mainthing">
+      <div id="portfolio-page" class="content hidden">
+        <center>
+          <h1>Portofolio</h1>
+          <br>
+          <sub>A Collection of Past and Present Application Development</sub>
+        </center>
+      </div>
+      <div id="hire-page" class="content hidden">
+        <center>
+          <h1>Hire KLYE</h1>
+          <br>
+          <sub>Need Help on Development, Integrations or Quality Assurance?</sub>
+        </center>
+      </div>
+      <div id="donate-page" class="content hidden">
+        <center>
+          <h1>Donate</h1>
+          <br>
+          <sub>Looking to Buy KLYE a coffee (or beer) to Help Increase Happiness?</sub>
+        </center>
+      </div>
+      <div id="about-page" class="content hidden">
+        <center>
+          <h1>About</h1>
+          <br>
+          <sub>A brief history shitpost of the developer known as KLYE</sub>
+        </center>
+      </div>
       <span id="bigthing">
         <sub id="officialtop">
           Welcome to
@@ -37,7 +112,7 @@
   </div>
   <img src="/img/CLEARBACKLOGO.png" id="klyelogo">
   <footer>
-    <span id="totallylegitcopyright">©2021 KLYE.NET</span>
+    <span id="totallylegitcopyright">©2023 KLYE.NET</span>
   </footer>
 </body>
 <script>

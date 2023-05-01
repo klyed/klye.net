@@ -107,7 +107,8 @@ display: inline-flex;
 }
 
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important;
+  display: none !important;
 }
 
 .sexytext {
