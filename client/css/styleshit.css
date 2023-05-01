@@ -123,6 +123,7 @@ display: inline-flex;
 .hidden {
   visibility: hidden !important;
   display: none !important;
+  transition: 0.25s all;
 }
 
 .sexytext {
