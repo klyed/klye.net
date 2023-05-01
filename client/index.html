@@ -14,7 +14,7 @@
   
   <script>
 
-    var pageElemArray = ['home', 'portfolio', 'hire', 'donate', 'about'];
+    var pageElemArray = ['home', 'blog', 'portfolio', 'hire', 'donate', 'about'];
 
     function pageHider(elem){
       if(!elem) return console.log('Invalid Element!');
@@ -36,6 +36,10 @@
       page = page.toLowerCase();
       var pageName = `${page}-page`;
       switch(page){
+        case "home":
+          pageHider(page);
+          return console.log(`Home Page!`);
+        break;
         case "portfolio":
           pageHider(page);
           return console.log(`Portfolio Page!`);
@@ -63,7 +67,7 @@
     <div id="menudiv">
       <nav>
         <ul class="menuroot sexyblackoutline">
-          <li class="menuthing "><a id="home" style="float: left;" title="Home Page">KLYE.NET</a></li>
+          <li class="menuthing "><a id="home" style="float: left;" title="Home Page"><b>KLYE.NET</b></a></li>
           <li class="menuthing "><a id="blog" style="float: left;" src="https://peakd.com/@klye" target="_blank" title="Visit KLYE's HIVE Blog on PeakD.com">blog</a></li>
           <li class="menuthing "><a id="portfolio" style="float: left;"  onclick="pageChange(this.id)" title="View My Project Portfolio">portfolio</a></li>
           <li class="menuthing "><a id="hire" style="float: left;" onclick="pageChange(this.id)" title="Hire KLYE as a Freelance Software Engineer or Consulant">hire</a></li>
