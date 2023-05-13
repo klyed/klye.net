@@ -56,6 +56,10 @@
          pageHider(page);
          return console.log(`About Page!`);
         break;
+        case "art":
+         pageHider(page);
+         return console.log(`Art Page!`);
+        break;
         default:
           pageHider(page);
           return console.log(`Default/Home Page!`);
@@ -72,9 +76,10 @@
           <li class="menuthing "><a id="portfolio" style="float: left;"  onclick="pageChange(this.id)" title="View My Project Portfolio"><i class="fas fa-address-book" style="color:green"></i> portfolio</a></li>
           <li class="menuthing "><a id="hire" style="float: left;" onclick="pageChange(this.id)" title="Hire KLYE as a Freelance Software Engineer or Consulant"><i class="fas fa-utensils" style="color:lightblue"></i> hire</a></li>
           <li class="menuthing "><a id="henode" style="float: left;" target="_blank"  href="https://he.klye.net" title="Check Out the Hive Engine API Node" style="color:white !important; text-decoration: none !important;"><i class="fab fa-hive" style="color:#790000"></i> <span style="color:white !important;">hive-engine</span></a></li>
-          <li class="menuthing "><a id="hivenoce" style="float: left;" target="_blank" href="https://hive.klye.net" title="Check Out the Hive API Node" style="color:white !important; text-decoration: none !important;"><i class="fab fa-hive" style="color:#ff0000"></i> <span style="color:white !important;">hive</span></a></li>
+          <li class="menuthing "><a id="hivenoge" style="float: left;" target="_blank" href="https://hive.klye.net" title="Check Out the Hive API Node" style="color:white !important; text-decoration: none !important;"><i class="fab fa-hive" style="color:#ff0000"></i> <span style="color:white !important;">hive</span></a></li>
           <li class="menuthing "><a id="donate" style="float: left;" onclick="pageChange(this.id)" title="Make a Donation to the KLYE Empire"><i class="fas fa-hand-holding-usd" style="color:lawngreen;"></i> donate</a></li>
           <li class="menuthing "><a id="about" style="float: left;" onclick="pageChange(this.id)" title="About the Mythical Internet Asshole KLYE"><i class="far fa-question-circle" style="color:blue;"></i> about</a></li>
+          <li class="menuthing "><a id="art" style="float: left;" onclick="pageChange(this.id)" title="The World Reknowned KLYE ART"><i class="fas fa-paint-brush"></i> art</a></li>
           <li class="menuthing hidden"><a id="menuburger" style="position: fixed; top: 0.7em; right: 1.1em;"><b><i class="fas   fa-fw fa-2x fa-bars"></i></b></a></li>
         </ul>
       </nav>
@@ -130,6 +135,16 @@
           <br>
           <br>
           <sub class="pageContent">A brief history shitpost of the developer known as KLYE</sub>
+        </center>
+      </div>
+      <div id="art-page" class="content hidden">
+        <center>
+          <sub id="officialtop">
+            Art
+          </sub>
+          <br>
+          <br>
+          <sub class="pageContent">Will upload the entire KLYE ART portfolio here eventually!</sub>
         </center>
       </div>
       </span>
