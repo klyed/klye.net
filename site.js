@@ -1,10 +1,10 @@
 var express = require("express"),
   app = express(),
   server = require("http").createServer(app),
-  helmet = require('helmet'),
+  //helmet = require('helmet'),
   log = require('fancy-log');
 
-app.use(helmet({contentSecurityPolicy: false}));
+//app.use(helmet({contentSecurityPolicy: false}));
 
 let clientIp;
 let port = 1337;
